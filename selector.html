@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		/* All div and all p.. I want it to follow this style */
+		div, p {
+			color: green;
+		}
+
+		/* All the p inside div... , ancestor selector .. (all the anak, cucu, cicit) */		
+		div p {
+			background-color: yellow;
+		}
+		/* Child selector, all the p that is directly inside div (anak) */
+		div > p {
+	       border: 3px green double;
+		}
+		/* Next sibling selector .. the next p that is after a div */
+		div + p {
+			font-size: 20px;
+		}
+
+		/* Sibling selector - all the p that is after div */
+        div ~ p {
+        	text-decoration: line-through;
+        }
+
+	</style>
+</head>
+<body>
+	<div>
+		<p>This is a p</p>
+		<p>This is another p</p>
+		<span><p>This is the last p</p></span>
+	</div>
+	<p>This is p outside div</p>
+	<p>This is another p outside div</p>
+
+</body>
+</html>
