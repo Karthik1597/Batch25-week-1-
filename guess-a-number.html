@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Guess a number</title>
+</head>
+<body>
+	<h2>Guess a number</h2>
+	<p>Enter a number between 1 and 100</p>
+	<input type="number" name="text" id="numberGuess" >
+	<button onclick="guessPressed()" id="guessBtn">Guess</button>
+	<button onclick="restartPressed()" id="restartBtn" hidden>Restart</button>
+	<p id="message"></p>
+	<p id="chances"></p>
+<script type="text/javascript">
+	
+	var computerNumber = Math.ceil(Math.random()*100);
+	var chances = 5;
+
+	function guessPressed(){
+		var userGuess = document.getElementById("numberGuess").value;
+        chances--;
+
+		if (userGuess < computerNumber){
+             document.getElementById("message").innerHTML = "Number too low. try again"
+		}
+		else if (userGuess > computerNumber){
+			document.getElementById("message").innerHTML = "Number too high. try again"
+		}
+		else if (userGuess== computerNumber){
+			document.getElementById("message").innerHTML = "Number is correct. You win"
+        }
+        else {
+        	document.getElementById("message").innerHTML = "Please enter a number"
+        }
+        if (chances > 0 ){
+        	document.getElementById("chances").innerHTML = chances+" chances remaining."
+        }
+        else {
+        	document.getElementById("chances").innerHTML = "Game over, the number is "+ computerNumber
+        	document.getElementById("guessBtn").setAttribute("disabled",true);
+        	document.getElementById("restartBtn").removeAttribute("hidden");
+        }
+	}
+
+	function restartPressed(){
+// A new random number should be generated
+computerNumber = Math.ceil(Math.random()*100)
+// Chances go back to 5
+chances = 5
+// Enable the guess button
+document.getElementById("guessBtn").removeAttribute("disabled");
+//Remove the restart button
+document.getElementById("restartBtn").setAttribute("hidden",true);
+
+// CLear userGuess Input
+document.getElementById("numberGuess").value = ""   
+
+document.getElementById("message").innerHTML = "";
+document.getElementById("chances").innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>
