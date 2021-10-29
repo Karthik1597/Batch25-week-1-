@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS DOM example</title>
+</head>
+<body>
+	<h1>DOM example</h1>
+	<button onclick="sayHello()">Click Me!</button>
+	<hr>
+	<input type="text" name="name" id="name" placeholder="Enter your name">
+	<button onclick="sayGoodbye()" id="goodbyebtn">Click me again!</button>
+	<button onclick="activatePressed()" id="deactivatebtn">Deactivate button</button>
+	<p id="message"></p>
+	<hr>
+	<h3>My to do list</h3>
+	<input type="text" name="todo" id="todo" placeholder="Enter new item">
+	<button onclick="addClicked()">Add new Item</button>
+	<ul id="listUl">
+
+	</ul>
+</body>
+<script type="text/javascript">
+	
+    /*
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+
+
+*/
+
+function addClicked(){
+	
+        // 1) Get the item added by user inside inputs
+
+        var newItem = document.getElementById("todo").value;
+
+        // 2) Create a new li element.
+
+        var newLi = document.createElement("li");
+
+        // 3) Add 1 into the new li element.
+
+        newLi.innerHTML = newItem;
+
+        // 4) Append li to ul (listUl)
+
+        document.getElementById("listUl").appendChild(newLi);
+    }
+
+
+
+
+
+    
+
+
+
+
+
+    function activatePressed()
+
+	   // If the button is deactivated = activate it  == Activate Button 
+	   // If the button is activated = deactivate it... == Deactivate Button
+	   
+	   if (document.getElementById("goodbyebtn").disabled == true){
+	   	document.getElementById("goodbyebtn").removeAttribute("disabled");
+	   	document.getElementById("deactivatebtn").innerHTML = "Deactivate Button";
+	   	   // CHange the lable of the button..
+	   	}
+
+	   	else {
+	   		document.getElementById("goodbyebtn").setAttribute("disabled", true);
+	   		document.getElementById("deactivatebtn").innerHTML = "Activate Button";
+	   // CHange the lable of the button..
+
+	}
+
+
+	function sayHello(){
+		alert("Hello");
+	}
+
+	function sayGoodbye(){
+		//Retrieve the value from input of id name
+		var name = document.getElementById("name").value;
+		alert("Goodbye "+name);
+
+        // Writing it on p of id messages
+
+        document.getElementById("message").innerHTML = "Hello "+name + " another message here!" 
+
+
+    }
+</script>
+
+
+</html>
