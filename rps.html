@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rock paper scissord!</title>
+</head>
+<body>
+	<h1>Rock paper scissors</h1>
+	<p id="message"></p>
+	<p id="score"></p>
+    <button onclick="selectWeapon(0)">Rock</button>
+	<button onclick="selectWeapon(1)">Paper</button>
+	<button onclick="selectWeapon(2)">Scissors</button>
+
+</body>
+<script type="text/javascript">
+	var computerScore = 0;
+	var userScore = 0;
+
+	function selectWeapon(userChoice){
+
+        var computerChoice = Math.floor(Math.random()*3);
+
+        var messageEl = document.getElementById("message");
+		if (userChoice == 0){
+			// User select rock 
+			if (computerChoice == 0){
+
+			    messageEl.innerHTML = "Computer select Rock, it's a draw";
+			}
+            else if (computerChoice == 1){
+            	messageEl.innerHTML = "Computer select Paper, you lost"; 
+            	computerScore++;
+            }
+            else {
+            	messageEl.innerHTML = "Computer select scissors, you win";
+            	userScore++;
+            }
+
+        }
+		else if (userChoice == 1){
+
+			// User select paper
+			if (computerChoice == 0){
+				messageEl.innerHTML = "Computer select Rock, You win";
+				userScore++;
+			}
+            else if (computerChoice == 1){
+            	messageEl.innerHTML = "Computer select Paper, It's a draw";
+            }
+            else {
+            	messageEl.innerHTML = "Computer select scissors, you lose";
+            	computerScore++;
+            }
+
+       }
+        else {
+        	// User select scissors
+        	if (computerChoice == 0){
+        	    messageEl.innerHTML = "Computer select Rock, You lose";	
+        	    computerScore++;
+        	}
+        	else if (computerChoice == 1){
+        		messageEl.innerHTML = "Computer select Paper, You win";
+        	    userScore++
+        	}
+        	else {
+        		messageEl.innerHTML = "Computer select scissors, it's a draw";
+        	}
+
+        }
+        document.getElementById("score").innerHTML = "User: "+userScore + " , Computer: "+computerScore
+    }
+		
+</script>
+</html>
+
+
+
+
