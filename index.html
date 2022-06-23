@@ -1,70 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My first website</title>
+	<title>Portfolio website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-	<h1>Hello World</h1>
-	<h2>This is a subtitle</h2>
-	<h3>This is the third heading</h3>
-	<h4>This is the forth heading</h4>
-	<h5>This is the fifth heading</h5>
-	<h6>This is the 6th heading</h6>
+	<!----hero Section start---->
 
-	<p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit,</strong>sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. <em>Ut enim ad minim veniam,</em>
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit,</strong>sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. <em>Ut enim ad minim veniam,</em>
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<hr>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolo"</p>
-	<img src="https://sgp1.digitaloceanspaces.com/radarbogor/2020/09/Ilustrasi-Icon-Malaysia.jpg" width="1200px">
-	<img src="https://images.idgesg.net/images/article/2019/10/cso_cybersecurity_cyber_attack_warning_danger_threat_hack_by_matejmo_gettyimages-486818926_2400x1600-100813827-large.jpg?auto=webp">
-	<br>
-	<a href="www.facebook.com">Open Facebook</a>
-	<a href="www.instagrm.com">Open Instagram</a>
-	<a href="www.twitter.com">Open Twitter</a>
-	<hr>
-	<h2>Top Three Students</h2>
-	<ol>
-		<li>Ahmad</li>
-		<li>Jenny</li>
-		<li>Nora</li>
-	</ol>
-	<h2>Topic for exams</h2>
-	<ul>
-		<li>Fizz Buzz</li>
-		<li>The fences</li>
-		<li>Pyramid</li>
-	</ul>
+	<div class="hero">
+		<nav>
+			<h2 class="logo">Portfo<span>lio</span></h2>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<a href="#" class="btn">Subscribe</a>
+		</nav>
 
+		<div class="content">
+			<h4>Hello, my name is</h4>
+			<h1>Karthik <span>Raj</span></h1>
+			<h3>I'am a Web Developer.</h3>
+			<div class="newslatter">
+				<form>
+					<input type="email" name="email" id="mail" placeholder="Enter Your Email">
+					<input type="submit" name="submit" value="Lets Start">
+				</form>
+			</div>
+		</div>
+	</div>
 
+	<!----About section start---->
+	<section class="about">
+		<div class="main">
+			<img src="img/main-img.jpeg">
+			<div class="about-text">
+				<h2>About Me</h2>
+				<h5>Developer <span>& Designer</span></h5>
+				<p>I am a front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.A responsive design makes your website accessible to all users, regardless of their device.</p>
+				<button type="button">Let's Talk</button>
+			</div>
+		</div>
+	</section>
 
+	<!-----service section start----------->
+	<div class="service">
+		<div class="title">
+			<h2>Our Services</h2>
+		</div>
 
+		<div class="box">
+			<div class="card">
+				<i class="fas fa-bars"></i>
+				<h5>Web Development</h5>
+				<div class="pra">
+					<p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
 
-	</body
-	<html>
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
 
+			<div class="card">
+				<i class="far fa-user"></i>
+				<h5>App Development</h5>
+				<div class="pra">
+					<p>Every app should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
 
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
 
+			<div class="card">
+				<i class="far fa-bell"></i>
+				<h5>UI Design Developer</h5>
+				<div class="pra">
+					<p>Creating UI designs with attractive features, enticing visuals and responsive interface elements requires a flair for creativity.</p>
 
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<!---------Service section-->
+	<div class="service">
+		<div class="title">
+			<h2>MY PROJECTS</h2>
+		</div>
 
+		<div class="box">
+			<div class="card">
+				<i class="fas fa-bars"></i>
+				<h5>Hotel Booking Website</h5>
+				<div class="pra">
+					<p>Hotel Booking System is online booking engine that allows guests to make secure online reservations through hotel website and helps hotels to accept bookings and collect payments online..</p>
 
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
 
+			<div class="card">
+				<i class="far fa-user"></i>
+				<h5>Video Editing App</h5>
+				<div class="pra">
+					<p>Video editing is the manipulation and arrangement of video shots. Video editing is used to structure and present all video information, including films and television shows.</p>
 
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
 
+			<div class="card">
+				<i class="far fa-bell"></i>
+				<h5>Barber Shop Website</h5>
+				<div class="pra">
+					<p>A shop where people go to have their hair cut and put into a particular style. Hairdressing.</p>
 
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+              
+	<!------Contact Me------>
+	<div class="contact-me">
+		<p>Let Me Get You A Beautiful Website.</p>
+		<a class="button-two" href="#">Hire Me</a>
+	</div>
 
-
-
+	<!------footer start--------->
+	<footer>
+		<p>Karthik Raj</p>
+		<p>For more HTML, CSS, and coding tutorial - please click on the link below to subscribe to my channel:</p>
+		<div class="social">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-dribbble"></i></a>
+		</div>
+		<p class="end">CopyRight By Karthik Raj</p>
+	</footer>
+</body>
+</html>
